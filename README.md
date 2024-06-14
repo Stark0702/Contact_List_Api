@@ -40,7 +40,6 @@ cd contact-list-api
          "name": "John Doe",
          "phoneNumbers": ["1234567890", "9876543210"],
          "imageUrl": "https://example.com/avatar.jpg",
-         "imageFile": "base64_encoded_image_data"
        }
        ```
 
@@ -52,7 +51,6 @@ cd contact-list-api
          "name": "Updated Name",
          "phoneNumbers": ["9999999999"],
          "imageUrl": "https://example.com/updated_avatar.jpg",
-         "imageFile": "base64_encoded_updated_image_data"
        }
        ```
 
