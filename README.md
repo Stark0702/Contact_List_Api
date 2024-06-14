@@ -55,8 +55,8 @@ cd contact-list-api
 
    - **Create a Contact**
      - **Endpoint:** `POST {{baseUrl}}/contacts`
-     - **Request Body (JSON):**
-       ```json
+     - **Request Body (Form data):**
+       ```
        {
          "name": "John Doe",
          "phoneNumbers": ["1234567890", "9876543210"],
@@ -68,8 +68,8 @@ cd contact-list-api
 
    - **Update a Contact**
      - **Endpoint:** `PUT {{baseUrl}}/contacts/:id`
-     - **Request Body (JSON):**
-       ```json
+     - **Request Body (Form data):**
+       ```
        {
          "name": "Updated Name",
          "phoneNumbers": ["9999999999"],
