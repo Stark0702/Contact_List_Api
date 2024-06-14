@@ -90,8 +90,8 @@ cd contact-list-api
      - Replace `query` with the name or phone number to search for.
 
    - **Export Contacts as CSV File**
-     - **Endpoint:** `GET {{baseUrl}}/contacts/export/csv`
-     - Postman will prompt you to download the CSV file received from the server.
+     - **Endpoint:** `GET {{baseUrl}}/contacts/export`
+     - Csv file will be saved inside the local machine.
 
 5. **Verify Responses**: Check the response in Postman's "Response" section to ensure the operation was successful.
 
