@@ -30,12 +30,7 @@ cd contact-list-api
 
 1. **Open Postman**: Launch Postman.
 
-2. **Import Collection**: Import the provided Postman collection (`Contact_List_API.postman_collection.json`).
-
-3. **Set Environment Variables** (Optional):
-   - Set `baseUrl` to `http://localhost:3000` if not using Postman environment auto-detection.
-
-4. **Perform CRUD Operations**
+2. **Perform CRUD Operations**
 
    - **Create a Contact**
      - **Endpoint:** `POST {{baseUrl}}/contacts`
@@ -75,7 +70,7 @@ cd contact-list-api
      - **Endpoint:** `GET {{baseUrl}}/contacts/export`
      - Csv file will be saved inside the local machine.
 
-5. **Verify Responses**: Check the response in Postman's "Response" section to ensure the operation was successful.
+3. **Verify Responses**: Check the response in Postman's "Response" section to ensure the operation was successful.
 
 
 
