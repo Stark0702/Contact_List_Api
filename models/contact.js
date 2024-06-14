@@ -1,0 +1,23 @@
+const mongoose = require('mongoose');
+
+const phoneNumberSchema = new mongoose.Schema({
+  phoneNumber: {
+    type: String,
+    required: true,
+    unique: true
+  }
+});
+
+const contactSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  phoneNumbers: [phoneNumberSchema],
+  imageUrl: String
+});
+
+const Contact = mongoose.model('Contact', contactSchema);
+
+module.exports = Contact;
