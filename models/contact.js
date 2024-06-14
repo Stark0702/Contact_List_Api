@@ -15,7 +15,11 @@ const contactSchema = new mongoose.Schema({
     unique: true
   },
   phoneNumbers: [phoneNumberSchema],
-  imageUrl: String
+  imageUrl: String,
+  imageFile: {
+    data: Buffer,
+    contentType: String,
+  },
 });
 
 const Contact = mongoose.model('Contact', contactSchema);
