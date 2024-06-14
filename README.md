@@ -26,22 +26,6 @@ git clone https://github.com/your-username/contact-list-api.git
 cd contact-list-api
 ```
 
-### Running with Docker
-
-1. **Build Docker Image**
-
-   ```sh
-   docker build -t contact-list-api .
-   ```
-
-2. **Run Docker Container**
-
-   ```sh
-   docker run -p 3000:3000 contact-list-api
-   ```
-
-   The API will be accessible at `http://localhost:3000`.
-
 ### Using Postman for API Testing
 
 1. **Open Postman**: Launch Postman.
@@ -60,7 +44,6 @@ cd contact-list-api
        {
          "name": "John Doe",
          "phoneNumbers": ["1234567890", "9876543210"],
-         "email": "johndoe@example.com",
          "imageUrl": "https://example.com/avatar.jpg",
          "imageFile": "base64_encoded_image_data"
        }
@@ -73,7 +56,6 @@ cd contact-list-api
        {
          "name": "Updated Name",
          "phoneNumbers": ["9999999999"],
-         "email": "updatedemail@example.com",
          "imageUrl": "https://example.com/updated_avatar.jpg",
          "imageFile": "base64_encoded_updated_image_data"
        }
