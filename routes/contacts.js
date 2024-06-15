@@ -51,7 +51,7 @@ router.post('/', upload.single('imageFile'), async (req, res) => {
       name,
       phoneNumbers: parsedPhoneNumbers.map(phoneNumber => ({ phoneNumber })),
       imageFile,
-      imageUrl // Store the imageUrl if provided
+      imageUrl 
     });
 
     await contact.save();
@@ -103,7 +103,7 @@ router.put('/:id', upload.single('imageFile'), async (req, res) => {
       ...(name && { name }),
       ...(parsedPhoneNumbers && { phoneNumbers: parsedPhoneNumbers.map(phoneNumber => ({ phoneNumber })) }),
       ...(imageFile && { imageFile }),
-      ...(imageUrl && { imageUrl }) // Ensure to update imageUrl if provided
+      ...(imageUrl && { imageUrl }) 
     };
 
     const contact = await Contact.findByIdAndUpdate(req.params.id, updateData, { new: true });
@@ -160,7 +160,7 @@ router.get('/search', async (req, res) => {
 router.get('/export', async (req, res) => {
   try {
     const contacts = await Contact.find();
-    const csv = await generateContactsCSV(contacts); // Ensure to await here since generateContactsCSV is asynchronous
+    const csv = await generateContactsCSV(contacts); 
 
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', 'attachment; filename=contacts.csv');
