@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app'); // Assuming your Express app instance is exported from app.js
+const app = require('../app'); 
 const Contact = require('../models/contact');
 const fs = require('fs');
 const generateContactsCSV = require('../services/csvService.js');
@@ -7,7 +7,7 @@ const generateContactsCSV = require('../services/csvService.js');
 // Test data
 const testContact = {
   name: 'John Doe',
-  phoneNumbers: [{ phoneNumber: '5555555555' }], // Correct format for phoneNumbers
+  phoneNumbers: [{ phoneNumber: '5555555555' }], 
   imageUrl: 'https://example.com/john-doe.jpg'
 };
 
@@ -148,14 +148,12 @@ describe('Contact API Endpoints', () => {
     // Create a contact first
     await Contact.create(testContact);
 
-    // Perform GET request with Accept: application/json header
     const res = await request(app)
       .get('/contacts')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
 
-    // Assert the response body structure for JSON response
     expect(Array.isArray(res.body)).toBe(true); // Ensure response body is an array
     expect(res.body.length).toEqual(1); // Assuming only one contact was created
     expect(res.body[0]).toHaveProperty('name', testContact.name);
