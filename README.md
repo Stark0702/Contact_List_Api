@@ -33,7 +33,7 @@ cd contact-list-api
 2. **Perform CRUD Operations**
 
    - **Create a Contact**
-   - **Use locathost:3000 to perform the API in Local Machine**
+   - **Use locathost:3000 to perform the API in Local Machine with PostMan**
      - **Endpoint:** `POST localhost:3000/contacts`
      - **Request Body (Form data - Key Value Pair):**
        ```
