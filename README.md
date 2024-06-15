@@ -33,7 +33,8 @@ cd contact-list-api
 2. **Perform CRUD Operations**
 
    - **Create a Contact**
-     - **Endpoint:** `POST {{baseUrl}}/contacts`
+   - **Use locathost:3000 to perform the API in Local Machine**
+     - **Endpoint:** `POST localhost:3000/contacts`
      - **Request Body (Form data - Key Value Pair):**
        ```
        {
@@ -44,7 +45,7 @@ cd contact-list-api
        ```
 
    - **Update a Contact**
-     - **Endpoint:** `PUT {{baseUrl}}/contacts/:id`
+     - **Endpoint:** `PUT localhost:3000/contacts/:id`
      - **Request Body (Form data - Key Value Pair):**
        ```
        {
@@ -55,17 +56,17 @@ cd contact-list-api
        ```
 
    - **Fetch All Contacts**
-     - **Endpoint:** `GET {{baseUrl}}/contacts`
+     - **Endpoint:** `GET localhost:3000/contacts`
 
    - **Delete a Contact**
-     - **Endpoint:** `DELETE {{baseUrl}}/contacts/:id`
+     - **Endpoint:** `DELETE localhost:3000/contacts/:id`
 
    - **Search Contacts by Name or Phone Number**
-     - **Endpoint:** `GET {{baseUrl}}/contacts/search?q=query`
+     - **Endpoint:** `GET localhost:3000/contacts/search?q=query`
      - Replace `query` with the name or phone number to search for.
 
    - **Export Contacts as CSV File**
-     - **Endpoint:** `GET {{baseUrl}}/contacts/export`
+     - **Endpoint:** `GET localhost:3000/contacts/export`
      - Csv file will be saved inside the local machine.
 
 3. **Verify Responses**: Check the response in Postman's "Response" section to ensure the operation was successful.
